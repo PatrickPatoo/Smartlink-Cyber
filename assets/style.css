@@ -99,26 +99,44 @@ h3 {
   position: relative;
 }
 
+/* LOGO AND BRAND NAME */
+
 .logo {
   display: flex;
   align-items: center;
+  gap: 15px;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .logo img {
-  width: 50px !important;
-  height: 50px !important;
-  min-width: 50px !important;
-  min-height: 50px !important;
-  max-width: 50px !important;
-  max-height: 50px !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
   object-position: center;
   background: white;
   border: 2px solid white;
   flex-shrink: 0;
 }
+
+.logo-text {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+  white-space: nowrap;
+}
+
+.orange-link {
+  color: var(--orange);
+  font-weight: 900;
+}
+
+/* NAVIGATION LINKS */
+
 .links {
   display: flex;
   align-items: center;
@@ -203,6 +221,8 @@ h3 {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* TABLET NAVIGATION */
+
 @media (max-width: 900px) {
   .nav-wrap {
     min-height: 70px;
@@ -216,11 +236,18 @@ h3 {
 
   .logo {
     order: 1;
+    gap: 12px;
   }
 
   .logo img {
-    width: 125px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .logo-text {
+    font-size: 17px;
   }
 
   .tools {
@@ -261,9 +288,20 @@ h3 {
     width: calc(100% - 28px);
   }
 
+  .logo {
+    gap: 9px;
+  }
+
   .logo img {
-    width: 105px;
-    height: 46px;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  .logo-text {
+    font-size: 14px;
+    letter-spacing: 0.5px;
   }
 
   .tools {
@@ -1000,6 +1038,7 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
+
 /* =========================================
    TESTIMONIAL SLIDER
 ========================================= */
@@ -1016,12 +1055,12 @@ textarea {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding: 4px 2px 14px;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .testimonial-track::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
 }
 
 .testimonial-track .testimonial {
@@ -1084,6 +1123,7 @@ textarea {
     right: -6px;
   }
 }
+
 /* =========================================
    DEVELOPER CREDIT
 ========================================= */
