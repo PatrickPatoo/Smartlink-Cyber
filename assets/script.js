@@ -724,40 +724,7 @@ if (f3) {
 }
 
 /* =========================================
-   17. DARK AND LIGHT MODE
-========================================= */
-
-var root = document.documentElement;
-var themeButton = document.getElementById("theme");
-
-if (themeButton) {
-  themeButton.addEventListener("click", function () {
-    var darkNow = root.getAttribute("data-theme") === "dark";
-
-    var newTheme = darkNow ? "light" : "dark";
-
-    root.setAttribute("data-theme", newTheme);
-
-    try {
-      localStorage.setItem("sl-theme", newTheme);
-    } catch (error) {
-      console.warn("Theme preference could not be saved.");
-    }
-  });
-}
-
-try {
-  var savedTheme = localStorage.getItem("sl-theme");
-
-  if (savedTheme === "dark" || savedTheme === "light") {
-    root.setAttribute("data-theme", savedTheme);
-  }
-} catch (error) {
-  console.warn("Saved theme could not be loaded.");
-}
-
-/* =========================================
-   18. WHATSAPP LINKS
+   17. WHATSAPP LINKS
 ========================================= */
 
 document
@@ -768,7 +735,7 @@ document
   });
 
 /* =========================================
-   19. AUTOMATIC FOOTER YEAR
+   18. AUTOMATIC FOOTER YEAR
 ========================================= */
 
 var yearElement = document.getElementById("year");
@@ -778,7 +745,7 @@ if (yearElement) {
 }
 
 /* =========================================
-   20. TESTIMONIAL AUTO HORIZONTAL SLIDER
+   19. TESTIMONIAL AUTO HORIZONTAL SLIDER
 ========================================= */
 
 (function () {
